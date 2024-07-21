@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <title>SAVEN</title>
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta name="description" content="WELCOME TO THE CHURCH! My name is Zach, and I am a full time Legend of Zelda and Mario speedrunner. I also play piano and other various instruments every now and then. My channel might be a little scuffed but at least you can come chill and dab on the haters!!!!">
 
   <style>
@@ -18,6 +20,8 @@
     body {
       background: #fff url(/popes-saven.gif) center no-repeat;
       cursor: pointer;
+      text-align: center;
+      padding: 0;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -26,8 +30,24 @@
       }
     }
 
+    @media (max-width: 640px) {
+      body {
+        background-size: 50%;
+      }
+    }
+
     audio {
       display: none;
+    }
+
+    a {
+      position: absolute;
+      bottom: 5vh;
+      left: calc(50vw - 28px);
+      display: block;
+      padding: 16px;
+      color: #6441a5;
+      text-decoration: none;
     }
   </style>
 
@@ -52,6 +72,13 @@
         touch = true
         handleClick(sounds)
       })
+
+      document.querySelector("a").addEventListener("click", event => {
+        event.preventDefault();
+        setTimeout(() => {
+          window.location.href = "https://twitch.tv/popesquidward"
+        }, 1000)
+      })
     })
 
   </script>
@@ -62,6 +89,9 @@
   <audio src="/saven.mp3"></audio>
   <audio src="/elaven.mp3"></audio>
   <audio src="/leeyuhm.mp3"></audio>
-</body>
+  <a href="https://twitch.tv/popesquidward">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M2.149 0l-1.612 4.119v16.836h5.731v3.045h3.224l3.045-3.045h4.657l6.269-6.269v-14.686h-21.314zm19.164 13.612l-3.582 3.582h-5.731l-3.045 3.045v-3.045h-4.836v-15.045h17.194v11.463zm-3.582-7.343v6.262h-2.149v-6.262h2.149zm-5.731 0v6.262h-2.149v-6.262h2.149z" fill-rule="evenodd" clip-rule="evenodd" fill="currentColor"/></svg>
+  </a>
+  </body>
 
 </html>

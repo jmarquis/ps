@@ -33,12 +33,24 @@
 
   <script>
 
+    let touch = false
+
+    const handleClick = sounds => {
+      const sound = sounds[Math.floor(Math.random() * sounds.length)]
+      sound.currentTime = 0
+      sound.play()
+    }
+
     window.addEventListener("DOMContentLoaded", () => {
-      const sounds = document.querySelectorAll("audio")
+      sounds = document.querySelectorAll("audio")
+
       document.addEventListener("click", () => {
-        const sound = sounds[Math.floor(Math.random() * sounds.length)]
-        sound.currentTime = 0
-        sound.play()
+        if (!touch) handleClick(sounds)
+      })
+
+      document.addEventListener("touchstart", () => {
+        touch = true
+        handleClick(sounds)
       })
     })
 

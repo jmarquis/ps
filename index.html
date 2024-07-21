@@ -25,10 +25,31 @@
         background-color: #111;
       }
     }
+
+    audio {
+      display: none;
+    }
   </style>
+
+  <script>
+
+    window.addEventListener("DOMContentLoaded", () => {
+      const sounds = document.querySelectorAll("audio")
+      document.addEventListener("click", () => {
+        const sound = sounds[Math.floor(Math.random() * sounds.length)]
+        sound.currentTime = 0
+        sound.play()
+      })
+    })
+
+  </script>
 </head>
 
-<body onclick="window.location='https://twitch.tv/popesquidward'">
+<body>
+  <audio src="/bruh.mp3"></audio>
+  <audio src="/saven.mp3"></audio>
+  <audio src="/elaven.mp3"></audio>
+  <audio src="/leeyuhm.mp3"></audio>
 </body>
 
 </html>

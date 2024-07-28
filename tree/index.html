@@ -1,26 +1,61 @@
 <!doctype html>
 <html>
 
-<head>
-  <meta charset="utf-8">
-  <title>the</title>
+  <head>
+    <meta charset="utf-8">
+    <title>The</title>
 
-  <style>
-    html,
-    body {
-      width: 100vw;
-      height: 100vh;
-    }
+    <style>
 
-    body {
-      background: black url(/tree/assets/tree.png) center / cover no-repeat;
-      background-size: cover;
-      cursor: pointer;
-    }
-  </style>
-</head>
+      html,
+      body {
+        width: 100vw;
+        height: 100vh;
+      }
 
-<body onclick="window.location='https://twitch.tv/popesquidward'">
-</body>
+      body {
+        background: black url(/tree/assets/tree.png) center / cover no-repeat;
+        background-size: cover;
+        cursor: pointer;
+      }
+
+      nav {
+        position: absolute;
+        bottom: 5vh;
+        left: 0;
+        right: 0;
+        display: flex;
+        padding: 16px;
+        justify-content: center;
+        gap: 16px;
+      }
+
+      nav a {
+        flex: none;
+        display: block;
+        text-decoration: none;
+      }
+
+      nav a img {
+        width: 24px;
+        height: 24px;
+        vertical-align: bottom;
+      }
+
+      nav .twitch {
+        color: #6441a5;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <a href="/"><img src="/assets/popes-saven.gif"></a>
+      <a href="https://twitch.tv/popesquidward" class="twitch">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M2.149 0l-1.612 4.119v16.836h5.731v3.045h3.224l3.045-3.045h4.657l6.269-6.269v-14.686h-21.314zm19.164 13.612l-3.582 3.582h-5.731l-3.045 3.045v-3.045h-4.836v-15.045h17.194v11.463zm-3.582-7.343v6.262h-2.149v-6.262h2.149zm-5.731 0v6.262h-2.149v-6.262h2.149z" fill-rule="evenodd" clip-rule="evenodd" fill="currentColor"/></svg>
+      </a>
+    </nav>
+  </body>
 
 </html>

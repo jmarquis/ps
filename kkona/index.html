@@ -9,7 +9,7 @@
 
     <meta name="description" content="WELCOME TO THE CHURCH! My name is Zach, and I am a full time Legend of Zelda and Mario speedrunner. I also play piano and other various instruments every now and then. My channel might be a little scuffed but at least you can come chill and dab on the haters!!!!">
     <link rel="shortcut icon" href="/favicon.png">
-    <link rel="preload" as="image" href="/assets/popes-saven-open.gif">
+    <link rel="preload" as="image" href="/kkona/assets/popekona-open.png">
 
     <style>
 
@@ -78,24 +78,21 @@
       let timer = null
 
       const soundData = [
-        { id: "bruh", time: 700 },
-        { id: "saven", time: 900 },
-        { id: "elaven", time: 1000 },
-        { id: "leeyuhm", time: 800 },
-        { id: "jessus-trist", time: 1000 },
-        { id: "by-the-gram", time: 1000 },
-        { id: "cardiac-arrest", time: 1200 },
-        { id: "gram", time: 1400 },
-        { id: "liam", time: 1600 },
-        { id: "penis", time: 800 },
-        { id: "strokin-out", time: 1000 },
-        { id: "got-me-like", time: 1700 },
-        { id: "use-colgate", time: 1100 },
-        { id: "uhhh", time: 1400 },
-        { id: "ashole", time: 800 },
-        { id: "me-sock-a-duck", time: 1200 },
-        { id: "pog-my-ass", time: 1000 },
-        { id: "vaginuh", time: 800 },
+        { id: "laugh", time: 3400 },
+        { id: "bububu", time: 2300 },
+        { id: "whhhhhy", time: 1400 },
+        { id: "nnnnnnnn", time: 3100 },
+        { id: "howdy", time: 500 },
+        { id: "wuhuhuhu", time: 1600 },
+        { id: "whyyy", time: 1100 },
+        { id: "whhhy", time: 700 },
+        { id: "weehoohoo", time: 1800 },
+        { id: "whyyyyyy", time: 7700 },
+        { id: "woo", time: 900 },
+        { id: "hu", time: 500 },
+        { id: "weeeeeee", time: 3800 },
+        { id: "oooooo", time: 4100 },
+        { id: "ourna", time: 3100 },
       ]
 
       const handleClick = (body, sounds) => {
@@ -104,9 +101,9 @@
         const sound = document.querySelector(`#${data.id}`)
         sound.play()
         timer = setTimeout(() => {
-          body.style.backgroundImage = "url(/assets/popes-saven-open.gif)"
+          body.style.backgroundImage = "url(/kkona/assets/popekona-open.png)"
           timer = setTimeout(() => {
-            body.style.backgroundImage = "url(/assets/popes-saven.gif)"
+            body.style.backgroundImage = "url(/kkona/assets/popekona.png)"
           }, data.time)
         }, 200)
       }
@@ -115,7 +112,7 @@
         sounds = []
         soundData.forEach(data => {
           const sound = document.createElement("audio")
-          sound.src = `/assets/${data.id}.mp3`
+          sound.src = `/kkona/assets/${data.id}.mp3`
           sound.id = data.id
           document.body.appendChild(sound)
           sounds = [...sounds, sound]
